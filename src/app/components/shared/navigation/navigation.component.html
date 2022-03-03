@@ -1,0 +1,76 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;500&family=IBM+Plex+Sans+Thai:wght@200&family=Mitr:wght@200&family=Noto+Serif+Thai&display=swap" rel="stylesheet">
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+  <header>
+    <img src="../../../../assets/images/logo.png" alt="logo" class="logo" width="100" height="100">
+    <nav>
+      <ul class="nav__links">
+        <li><a routerLink="/">หน้าแรก</a></li>
+        <li><a routerLink="/product">สินค้า</a></li>
+        <li><a routerLink="/product/new">เพิ่มสินค้า</a></li>
+       
+        <li class="nav-item dropdown" *ngIf="isLoggedIn">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">{{ currentUser.name }}</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <li><a class="dropdown-item" href="/accountuser/edit/{{ currentUser._id }}">แก้ไขข้อมูล</a></li>
+            <li><a class="dropdown-item" href="/menu/{{currentUser.name}}">รายการของฉัน</a></li>
+            <li><a class="dropdown-item" href="/exchange">คำร้องขอแลกเปลี่ยน</a></li>
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <li><a class="dropdown-item" routerLink="/" (click)="logout()">ออกจากระบบ</a></li>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <a class="cta" routerLink="/login" *ngIf="!isLoggedIn"><button>Login</button></a>
+  </header>
+
+
+
+		
+  
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand">
+            <img src="../../../../assets/images/bb.png" alt="" width="80" height="70" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                <li class="nav-item active"><a class="nav-link" routerLink="/">หน้าแรก</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/product">สินค้า</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/product/new">เพิ่มสินค้า</a></li>
+                <li class="nav-item" *ngIf="!isLoggedIn"><a class="nav-link" routerLink="/login">Login</a></li>
+
+                <li class="nav-item dropdown" *ngIf="isLoggedIn">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">{{ currentUser.name }}</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <li><a class="dropdown-item" href="/accountuser/edit/{{ currentUser._id }}">แก้ไขข้อมูล</a></li>
+                    <li><a class="dropdown-item" href="/menu/{{currentUser.name}}">รายการของฉัน</a></li>
+                    <li><a class="dropdown-item" href="/exchange">คำร้องขอแลกเปลี่ยน</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" routerLink="/" (click)="logout()">ออกจากระบบ</a></li>
+                  </div>
+                </li>
+          </ul>
+        </div>
+
+</nav>  -->
+
+  
+
+
+
+
+

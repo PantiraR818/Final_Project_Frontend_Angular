@@ -1,0 +1,10 @@
+div{
+	color: black;
+	font-family: 'Athiti', sans-serif;
+}
+.card-body{
+	font-size: 20px;
+}
+.form-group .form-control{
+    font-size: 20px;
+}

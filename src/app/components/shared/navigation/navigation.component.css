@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  background: #161623;
+  padding: 0;
+}
+
+li, a, button{
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+}
+.logo{
+  cursor: pointer;
+}
+.nav__links{
+  list-style: none;
+}
+
+.nav__links li{
+  display: inline-block;
+  padding: 0px 10px;
+}
+.nav__links li a{
+  transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover{
+  color: rgba(255, 186, 39, 0.919);
+}
+ button{
+   padding: 9px 25px;
+   background-color: rgb(245, 80, 62);
+   border: none;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: all 0.3s ease 0s;
+ }
+
+ button:hover{
+   background-color: rgba(255, 186, 39, 0.919);
+ }
+ .dropdown-menu{
+  background: #161623;
+ }
+
+
+
+
+/* .fa-1x {
+    font-size: 1.5rem;
+    }
+    .navbar-toggler.toggler-example {
+    cursor: pointer;
+    }
+    .dark-blue-text {
+    color: #0A38F5;
+    }
+    .dark-pink-text {
+    color: #AC003A;
+    }
+    .dark-amber-text {
+    color: #ff6f00;
+    }
+    .dark-teal-text {
+    color: #004d40;
+    }
+
+    div{
+        color: black;
+        font-family: 'Athiti', sans-serif;
+    }
+    a{
+      color: black;
+    } */
