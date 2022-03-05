@@ -9,7 +9,7 @@ import { NavigationComponent } from './components/shared/navigation/navigation.c
 import { NewProductComponent } from './components/pages/new-product/new-product.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { ProductComponent } from './components/pages/product/product.component';
 
 import { MainComponent } from './components/pages/main/main.component';
@@ -25,6 +25,7 @@ import { SelectproComponent } from './components/pages/selectpro/selectpro.compo
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 // import { BrowserModule } from '@angular/platform-browser'; 
 import {NgToastModule} from 'ng-angular-popup';
+import { AuthInterceptor } from './helper/auth.interceptor';
 
 
 @NgModule({
@@ -51,7 +52,13 @@ import {NgToastModule} from 'ng-angular-popup';
     ReactiveFormsModule,
     NgToastModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
