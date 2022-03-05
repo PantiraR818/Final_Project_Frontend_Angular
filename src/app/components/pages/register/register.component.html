@@ -7,61 +7,54 @@
 <meta charset="UTF-8">
 <title></title>
 </head>
-<div class="limiter" id="login">
-    <div class="container-login100" >
-        <!-- style="background-image:url(https://image.freepik.com/free-photo/happy-woman-doing-online-shopping-home_329181-4301.jpg) -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-5 col-md-offset-1">
-                    <div class="login_topimg"> </div>
-                    <div class="wrap-login100">
-                        <form [formGroup]="registerForm" class="login100-form validate-form"> <span class="login100-form-title "> สมัครสมาชิก </span> <span class="login100-form-subtitle m-b-16"> กรุณากรอกข้อมูลให้ครบถ้วน </span>
-                            <div class="wrap-input100 validate-input m-b-16">
-                                <input class="input100" type="text" name="email" placeholder="Email" formControlName="email">
-                                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
-                            </div>
-                            <div class="wrap-input100 validate-input m-b-16">
-                                <input class="input100" type="password" name="password" placeholder="Password" formControlName="password">
-                                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
-                            </div>
-                            <div class="wrap-input100 validate-input m-b-16">
-                                <input class="input100" type="text" name="name" placeholder="Name" formControlName="name">
-                                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
-                            </div>
-                            
-                            <div class="wrap-input100 validate-input m-b-16">
-                                <input class="input100" type="text" name="tel" placeholder="Phone" formControlName="tel">
-                                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
-                            </div>
-                            <div class="wrap-input100 validate-input m-b-16">
-                               <input class="input100" type="text" name="birthday" placeholder="birthday" formControlName="birthday">
-                                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
-                            </div> 
-                            <div class="wrap-input100 validate-input m-b-16">
-                                <input class="input100" type="text" name="lineId" placeholder="Line ID" formControlName="lineId">
-                                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
-                            </div>
-                            <div class="wrap-input100 validate-input m-b-16">
-                                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"  ></span>
-                                <select class="input100" name="sex" placeholder="Gender" formControlName="sex">
-                                    <option value="1">ชาย</option>
-                                    <option value="2">หญิง</option>
-                                </select>  
-                            </div>
-                            <div class="wrap-input100 validate-input m-b-16">
-                                <input class="input100" type="text" name="address" placeholder="address" formControlName="address">
-                                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
-                            </div>
-                            <div class="flex-sb-m w-full p-b-30">
-                                <div class="contact100-form-checkbox"> <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me"> <label class="label-checkbox100" for="ckb1"> Remember me </label> </div>
-                                <div> <a href="#" class="txt1"> Forgot Password? </a> </div>
-                            </div>
-                            <div class="container-login100-form-btn p-t-25"> <button class="login100-form-btn" (click)="addMember()"> สมัครสมาชิก </button> </div>
-                        </form>
-                    </div>
-                </div>
+
+<div class="container" >
+    <div class="card">
+      <div class="content">
+      <div class="wrap-login100">
+        <img src="../../../../assets/images/regis.png" alt="" height="90px">
+        <form [formGroup]="registerForm" class="login100-form validate-form"> <span class="login100-form-title "> สมัครสมาชิก </span> <span class="login100-form-subtitle m-b-16"> กรุณากรอกข้อมูลให้ครบถ้วน </span>
+            <div class="wrap-input100 validate-input m-b-16">
+                <input class="input100" type="text" name="email" placeholder="Email" formControlName="email">
+                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
             </div>
-        </div>
+            <div class="wrap-input100 validate-input m-b-16">
+                <input class="input100" type="password" name="password" placeholder="Password" formControlName="password">
+                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
+            </div>
+            <div class="wrap-input100 validate-input m-b-16">
+                <input class="input100" type="text" name="name" placeholder="ชื่อผู้ใช้งาน" formControlName="name">
+                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
+            </div>
+            
+            <div class="wrap-input100 validate-input m-b-16">
+                <input class="input100" type="text" name="tel" placeholder="เบอร์โทร" formControlName="tel">
+                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
+            </div>
+            <div class="wrap-input100 validate-input m-b-16">
+               <input class="input100" type="text" name="birthday" placeholder="ว/ด/ป" formControlName="birthday">
+                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
+            </div> 
+            <div class="wrap-input100 validate-input m-b-16">
+                <input class="input100" type="text" name="lineId" placeholder="Line ID" formControlName="lineId">
+                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
+            </div>
+            <div class="wrap-input100 validate-input m-b-16">
+                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"  ></span>
+                <select class="input100" name="sex" placeholder="Gender" formControlName="sex">
+                    <option value="1">ชาย</option>
+                    <option value="2">หญิง</option>
+                </select>  
+            </div>
+            <div class="wrap-input100 validate-input m-b-16">
+                <input class="input100" type="text" name="address" placeholder="ที่อยู่" formControlName="address">
+                <span class="focus-input100 symbol-input100 glyphicon glyphicon-user"></span>
+            </div>
+            <div class="container-login100-form-btn p-t-25"> <button class="login100-form-btn" (click)="addMember()"> สมัครสมาชิก </button> </div>
+        </form>
     </div>
-</div>
+
+      </div>
+    </div>
+  </div>
+

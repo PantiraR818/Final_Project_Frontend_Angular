@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgToastService } from 'ng-angular-popup';
 import { MemberService } from 'src/app/services/member.service';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
 
@@ -17,8 +16,7 @@ export class LoginComponent implements OnInit {
     isLoggedIn = false;
   constructor(private service: MemberService,
               private router: Router,
-              private tokenStorage: TokenStorageService,
-              private toast: NgToastService
+              private tokenStorage: TokenStorageService
   ) {
 
   }
@@ -46,7 +44,6 @@ export class LoginComponent implements OnInit {
           this.tokenStorage.saveUser(res.userCredentials);
           this.isLoggedIn = true;
          window.location.reload();
-        //  this.toast.info({detail:'Success',summary:'แลกเปลี่ยนสำเร็จ', sticky:true,position:'tr'})
         // this.router.navigate(["/"]);
     },
       err => {

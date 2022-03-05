@@ -2,60 +2,49 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;500&family=IBM+Plex+Sans+Thai:wght@200&family=Mitr:wght@200&family=Noto+Serif+Thai&display=swap" rel="stylesheet">
-<html>
 <head>
 <meta charset="UTF-8">
 <title></title>
 </head>
-<div class="limiter" id="login" *ngIf="!isLoggedIn">
-    <div class="container-login100" >
-        <!-- style="background-image:url(https://image.freepik.com/free-photo/happy-woman-doing-online-shopping-home_329181-4301.jpg) -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-5 col-md-offset-1">
-                    <div class="login_topimg"> </div>
-                    <div class="wrap-login100">
-                        <form class="login100-form validate-form" [formGroup]="loginForm"> <span class="login100-form-title "> Login </span> <span class="login100-form-subtitle m-b-16"> to your account </span>
-                            <div class="wrap-input100 validate-input m-b-16" data-validate="Valid email is required: ex@abc.xyz"> 
-                                <input class="input100" type="text" name="email" placeholder="Email" formControlName="email"> 
-                                <span class="focus-input100"></span> 
-                                <span class="symbol-input100"> 
-                                    <span class="glyphicon glyphicon-user"></span> 
-                                </span> 
-                            </div>
-                            <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required"> 
-                                <input class="input100" type="password" name="password" placeholder="Password" formControlName="password"> 
-                                <span class="focus-input100"></span> 
-                                <span class="symbol-input100">
-                                     <span class="glyphicon glyphicon-lock"></span> 
-                                    </span> 
-                                </div>
-                            <div class="flex-sb-m w-full p-b-30">
-                                <div class="contact100-form-checkbox"> 
-                                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me"> 
-                                    <label class="label-checkbox100" for="ckb1"> Remember me </label> 
-                                </div>
-                                <div> <a href="#" class="txt1"> Forgot Password? </a> </div>
-                            </div>
-                            <div class="container-login100-form-btn p-t-25"> 
-                                <button class="login100-form-btn" (click)="doLogin()"> Login </button> 
-                            </div>
 
-                            <div class="container-login100-form-btn p-t-25"> 
-                                <div class="col text-center" style="color:red">
-                                    {{ errMessage }}
-                                </div>
-                            </div>
+<div class="container" id="login" *ngIf="!isLoggedIn" >
+    <div class="card">
+      <div class="content">
+        <div class="wrap-login100">
+            <img src="../../../../assets/images/woman.png" alt="" height="80px">
+            
+            <form class="login100-form validate-form" [formGroup]="loginForm"> <span class="login100-form-title ">เข้าสู่ระบบ</span> <span class="login100-form-subtitle m-b-16"> Your Account </span>
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Valid email is required: ex@abc.xyz"> 
+                    <input class="input100" type="text" name="email" placeholder="Email" formControlName="email"> 
+                    <span class="focus-input100"></span> 
+                    <span class="symbol-input100"> 
+                        <span class="glyphicon glyphicon-user"></span> 
+                    </span> 
+                </div>
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required"> 
+                    <input class="input100" type="password" name="password" placeholder="Password" formControlName="password"> 
+                    <span class="focus-input100"></span> 
+                    <span class="symbol-input100">
+                         <span class="glyphicon glyphicon-lock"></span> 
+                        </span> 
+                    </div>
 
-                            <div class="container-login100-form-btn p-t-25">
-                                <a class="nav-link" routerLink="/register">สมัครสมาชิก</a>
-                            </div>
-                        </form>
+                <div class="container-login100-form-btn p-t-25"> 
+                    <button class="login100-form-btn" (click)="doLogin()">เข้าสู่ระบบ</button> 
+                </div>
+
+                <div class="container-login100-form-btn p-t-25"> 
+                    <div class="col text-center" style="color:red">
+                        {{ errMessage }}
                     </div>
                 </div>
-            </div>
+
+                <div class="container-login100-form-btn p-t-25">
+                    <a class="nav-link" routerLink="/register">สมัครสมาชิก</a>
+                </div>
+            </form>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 <app-main *ngIf="isLoggedIn"></app-main>
